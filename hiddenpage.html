@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <title>This is a website</title>
+</head>
+<body style="background-color: black; color: white; font-family: sans-serif; text-align: center; padding-top: 50px;">
+  <h1 style="font-size: 50px;">Welcome to THE HIDDEN PAGE</h1>
+  <p style="font-size: 25px;">You Have Officialy Reached The Hardy Boys Status</p>
+  <button onclick="window.location.href='index.html';" style="background-color: white; color: black; border-color: white; border-width: 3px; border-radius: 100px; font-size: 23px; padding: 10px 20px;">
+    Go Back Home</button>
+<button onclick ="window.location.href='page2.html';" style="background-color: white; color: black; border-color: black; border-width: 3px; border-radius: 100px; font-size: 25px; padding:10px 20px;">Go To Page 2</button>
+    <button onclick="window.location.href='page3.html';" style="background-color: white; color: black; border-color: white; border-width: 3px; border-radius: 100px; font-size: 25px; padding: 10px 20px;">Go TO Page 3</button>
+    <button class="protected-btn" onclick="checkPassword()" style="background-color:black; color:black; border-color:black; font-size:25px;position: fixed; top: 0; left: 0; margin: 10px;">Open Secret Page</button>
+<script>
+function checkPassword() {
+    const correctPassword = "thehardyboys"; 
+    const secretPageUrl = "lockedhiddenpage.html"; 
+    let userInput = prompt("Please enter the password to open the file:");
+            if (userInput === correctPassword) {
+        window.location.href = 'lockedhiddenpage.html'; 
+    } else if (userInput === null) {
+        alert("Action canceled.");
+    } else {
+        alert("Incorrect password! Access denied.");
+    }
+}
+</script>
