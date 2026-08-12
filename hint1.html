@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<title>This is a website</title>
+<body style="background-color: black; color: white; font-family: sans-serif; text-align: center; padding-top: 50px;">
+<h1 style="color: white; font-size:25px">All The Letters In The Passcode Are Lowercase</h1>
+<button onclick="retryPassword()" style="background-color: white; color: black; border-color: black; border-width: 3px; border-radius: 100px; font-size: 25px; padding:10px 20px;">Go Back And Try Again</button>
+<script>
+function retryPassword() {
+    sessionStorage.setItem("retryPrompt", "true");
+    window.location.href = 'hiddenpage.html';
+};
+</script>
+</body>
