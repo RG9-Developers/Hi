@@ -27,14 +27,13 @@ const correctPassword1 = "hardyboys";
             window.location.href = 'hintpage.html';
         } else {
             alert("Incorrect Passcode! Access Denied. Try Again");
-setTimeout(checkPassword, 150);
+
         }
     }
 }
 window.onload = function() {
 if (sessionStorage.getItem("retryPrompt") === "true") {
 sessionStorage.removeItem("retryPrompt");
-setTimeout(checkPassword, 600);
 }
 };
 </script>
