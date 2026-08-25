@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>This is a website</title>
+</head>
+<video id="myAudio" src="click.mp4" style="display:none;" playsinline></video>
+<body style="background-color: black; color: white; font-family: sans-serif; text-align: center; padding-top: 50px;">
+  <h1 style="font-size: 50px;">Welcome to THE HIDDEN PAGE</h1>
+  <p style="font-size: 25px;">You Have Officialy Reached The Hardy Boys Status</p>
+  <button onclick="window.location.href='index.html';" style="background-color: white; color: black; border-color: white; border-width: 3px; border-radius: 100px; font-size: 23px; padding: 10px 20px;">
+    Go Back Home</button>
+<button onclick ="window.location.href='page2.html';" style="background-color: white; color: black; border-color: black; border-width: 3px; border-radius: 100px; font-size: 25px; padding:10px 20px;">Go To Page 2</button>
+    <button onclick="window.location.href='page3.html';" style="background-color: white; color: black; border-color: white; border-width: 3px; border-radius: 100px; font-size: 25px; padding: 10px 20px;">Go To Page 3</button>
+    <button class="protected-btn" onclick="checkPassword()" style="background-color:black; color:black; border-color:black; font-size:25px;position: fixed; top: 0; left: 0; margin: 10px;">Open Secret Page</button>
+<script>
+let wrongCount = 0;
+function checkPassword() {
+    const correctPassword = "thehardyboys"; 
+const correctPassword1 = "hardyboys"; 
+    let userInput = prompt("Please Enter Passcode To Open File");
+                if (userInput === correctPassword || userInput === correctPassword1) {
+        window.location.href = 'lockedhiddenpage.html';
+    } else if (userInput === null) {
+        alert("Action Canceled");
+    } else {
+        wrongCount++;
+        if (wrongCount >= 2) {
+            alert("Incorrect Passcode Twice! Opening Hints");
+            window.location.href = 'hintpage.html';
+        } else {
+            alert("Incorrect Passcode! Access Denied. Try Again");
+        }
+    }
+}
+</script>
+<script>
+    const clickSound = new Audio("click.mp4");
+
+    function playSound(url) {
+        clickSound.currentTime = 0; // Reset sound to the start
+        clickSound.play();
+        
+        setTimeout(function() {
+            window.location.href = url;
+        }, 625);
+    }
+</script>

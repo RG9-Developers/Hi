@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+<title>This is a website</title>
+<head>
+<body style="background-color: black; color: white; font-family: sans-serif; text-align: center; padding-top: 50px;">
+<video id="myAudio" src="click.mp4" style="display:none;" playsinline></video>
+<h1 style="color: white; font-size:50px">This is a Website Homepage</h1>
+<p style="color: white; font-size:25px">This is a description</p>
+<button onclick="playSound('page2.html');" style="background-color:white; color:black; border-color:white; border-width:3px; border-radius:100px; font-size:25px;padding: 10px 20px;">This is a Button</button>
+<button onclick="playSound('page3.html');" style="background-color: white; color: black; border-color: white; border-width: 3px; border-radius: 100px; font-size: 25px; padding: 10px 20px;">This is Another Button</button>
+
+<button onclick="playSound('hiddenpage.html');" style="background-color:black; color:black; border-color:black; font-size:25px;position: fixed; bottom: 0; right: 0; margin: 10px;">button</button>
+<script>
+    const clickSound = new Audio("click.mp4");
+
+    function playSound(url) {
+        clickSound.currentTime = 0; // Reset sound to the start
+        clickSound.play();
+        
+        setTimeout(function() {
+            window.location.href = url;
+        }, 625);
+    }
+</script>

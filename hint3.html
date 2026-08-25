@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+<title>This is a website</title>
+<head>
+<video id="myAudio" src="click.mp4" style="display:none;" playsinline></video>
+<body style="background-color: black; color: white; font-family: sans-serif; text-align: center; padding-top: 50px;">
+<h1 style="color: white; font-size:25px">Read The Whole Page Carefully</h1>
+<button onclick="retryPassword()" style="background-color: white; color: black; border-color: black; border-width: 3px; border-radius: 100px; font-size: 25px; padding:10px 20px;">Go Back</button>
+<script>
+function retryPassword() {
+    sessionStorage.setItem("retryPrompt", "true");
+    window.location.href = 'hiddenpage.html';
+};
+</script>
+<script>
+    const clickSound = new Audio("click.mp4");
+
+    function playSound(url) {
+        clickSound.currentTime = 0; // Reset sound to the start
+        clickSound.play();
+        
+        setTimeout(function() {
+            window.location.href = url;
+        }, 625);
+    }
+</script>
+</body> 
